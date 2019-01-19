@@ -8,7 +8,7 @@ class Display extends JFrame {
     private JButton[] buttons;
     private JLabel label, label2;
     private JButton buttonPoint, buttonPlus, buttonMin, buttonMult, buttonDiv, buttonDel, buttonRes;
-    private String r = "";
+    private String r = "0";
     private final Font F = new Font(Font.MONOSPACED, Font.BOLD, 25);
     private JButton cButton;
 
@@ -20,10 +20,12 @@ class Display extends JFrame {
         setLayout(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        label = new JLabel();
+        label = new JLabel(r);
         label.setBounds(10, 30, 230, 45);
         label.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
         label.setBackground(Color.WHITE);
+        label.setHorizontalAlignment(JLabel.RIGHT);
+        label.setFont(new Font("Agency FB", Font.PLAIN, 30));
         label.setOpaque(true);
 
         buttonDel = new JButton( "<");
