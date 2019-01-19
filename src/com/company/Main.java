@@ -6,9 +6,9 @@ import java.awt.*;
 
 class Display extends JFrame {
     private JButton[] buttons;
-    private JLabel label, label2;
+    static JLabel label, label2;
     private JButton buttonPoint, buttonPlus, buttonMin, buttonMult, buttonDiv, buttonDel, buttonRes;
-    private String r = "0";
+    static String r = "0";
     private final Font F = new Font(Font.MONOSPACED, Font.BOLD, 25);
     private JButton cButton;
 
@@ -100,8 +100,11 @@ class Display extends JFrame {
         buttons[9].setBounds(130, 135, 50, 40);
 
         for(int i = 0; i < 10; i++) {
+            buttons[i].addActionListener(new Action());
             add(buttons[i]);
         }
+
+        cButton.addActionListener(new Action());
 
         add(cButton);
         add(label);
@@ -120,6 +123,7 @@ class Display extends JFrame {
 public class Main {
 
     public static void main(String[] args) {
-	    new Display();
+
+        new Display();
     }
 }
