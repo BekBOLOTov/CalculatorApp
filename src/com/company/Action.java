@@ -19,12 +19,15 @@ public class Action implements ActionListener {
                 r = "";
             r += t;
         }
-        if (t.equals("C")) {
+        if (t.equals("<")) {
             String str = "";
             for (int i = 0; i < r.length() - 1; i++)
                 str += r.charAt(i);
             r = str;
             if(r.length() == 0) r = "0";
+        }
+        if (t.equals("C")) {
+            r = "0";
         }
         label.setText(r);
     }

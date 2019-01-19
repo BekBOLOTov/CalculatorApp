@@ -105,7 +105,7 @@ class Display extends JFrame {
         }
 
         cButton.addActionListener(new Action());
-
+        buttonDel.addActionListener(new Action());
         add(cButton);
         add(label);
         add(buttonDel);
