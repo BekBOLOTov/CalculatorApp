@@ -106,6 +106,12 @@ class Display extends JFrame {
 
         cButton.addActionListener(new Action());
         buttonDel.addActionListener(new Action());
+        buttonDiv.addActionListener(new Action());
+        buttonMult.addActionListener(new Action());
+        buttonMin.addActionListener(new Action());
+        buttonPlus.addActionListener(new Action());
+        buttonPoint.addActionListener(new Action());
+        buttonRes.addActionListener(new Action());
         add(cButton);
         add(label);
         add(buttonDel);
